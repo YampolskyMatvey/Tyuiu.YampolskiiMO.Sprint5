@@ -11,8 +11,8 @@ namespace Tyuiu.YampolskiiMO.Sprint5.Task6.V21.Test
             string path = Path.GetTempFileName();
             try
             {
-                File.WriteAllText(path, "оттепель и аттестат; tt; ТТ");
-                Assert.AreEqual(2, new DataService().LoadFromDataFile(path));
+                File.WriteAllText(path, "оттепель и аттестат; ттт; tt; ТТ");
+                Assert.AreEqual(4, new DataService().LoadFromDataFile(path));
             }
             finally
             {
