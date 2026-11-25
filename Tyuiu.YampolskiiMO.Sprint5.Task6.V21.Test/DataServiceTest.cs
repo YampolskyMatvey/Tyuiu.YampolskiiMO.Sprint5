@@ -6,13 +6,13 @@ namespace Tyuiu.YampolskiiMO.Sprint5.Task6.V21.Test
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void LoadFromDataFile_CountsCyrillicLowercasePairs()
+        public void LoadFromDataFile_CountsCyrillicPairsRegardlessOfCase()
         {
             string path = Path.GetTempFileName();
             try
             {
                 File.WriteAllText(path, "оттепель и аттестат; ттт; tt; ТТ");
-                Assert.AreEqual(4, new DataService().LoadFromDataFile(path));
+                Assert.AreEqual(5, new DataService().LoadFromDataFile(path));
             }
             finally
             {

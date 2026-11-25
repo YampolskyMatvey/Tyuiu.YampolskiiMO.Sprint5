@@ -7,7 +7,7 @@ namespace Tyuiu.YampolskiiMO.Sprint5.Task6.V21.Lib
     {
         public int LoadFromDataFile(string path)
         {
-            return Regex.Count(File.ReadAllText(path), "(?=тт)");
+            return Regex.Count(File.ReadAllText(path), "(?=тт)", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
         }
     }
 }
