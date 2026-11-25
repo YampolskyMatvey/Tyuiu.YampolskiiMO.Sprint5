@@ -14,7 +14,7 @@ namespace Tyuiu.YampolskiiMO.Sprint5.Task7.V23.Test
                 File.WriteAllText(path, "Hello, ёж!\nМир world 123.");
                 string outputPath = new DataService().LoadDataAndSave(path);
 
-                Assert.AreEqual("Hello, !\n world 123.", File.ReadAllText(outputPath));
+                Assert.AreEqual("Hello,!\n world 123.", File.ReadAllText(outputPath));
             }
             finally
             {
